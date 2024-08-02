@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Direction : Codable, Identifiable {
+    let id: Int
+    var content: String
+}

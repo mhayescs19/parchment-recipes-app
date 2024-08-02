@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct parchment_recipes_appApp: App {
+struct ParchmentRecipesApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

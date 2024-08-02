@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum RecipeError: Error {
+    case invalidUrl
+    case resourceNotFound
+    case dataMalformed
+}

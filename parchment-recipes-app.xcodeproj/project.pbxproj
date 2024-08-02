@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8447EBBD2C5C5068004A284E /* parchment_recipes_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBBC2C5C5068004A284E /* parchment_recipes_appApp.swift */; };
+		8447EBBD2C5C5068004A284E /* ParchmentRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBBC2C5C5068004A284E /* ParchmentRecipesApp.swift */; };
 		8447EBBF2C5C5068004A284E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBBE2C5C5068004A284E /* ContentView.swift */; };
 		8447EBC12C5C506A004A284E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8447EBC02C5C506A004A284E /* Assets.xcassets */; };
 		8447EBC42C5C506A004A284E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8447EBC32C5C506A004A284E /* Preview Assets.xcassets */; };
 		8447EBCE2C5C506A004A284E /* parchment_recipes_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBCD2C5C506A004A284E /* parchment_recipes_appTests.swift */; };
 		8447EBD82C5C506A004A284E /* parchment_recipes_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBD72C5C506A004A284E /* parchment_recipes_appUITests.swift */; };
 		8447EBDA2C5C506A004A284E /* parchment_recipes_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBD92C5C506A004A284E /* parchment_recipes_appUITestsLaunchTests.swift */; };
+		8447EBE82C5C50E4004A284E /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBE72C5C50E4004A284E /* Recipe.swift */; };
+		8447EBEA2C5C528E004A284E /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBE92C5C528E004A284E /* Ingredient.swift */; };
+		8447EBEC2C5C529C004A284E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBEB2C5C529C004A284E /* Direction.swift */; };
+		8447EBEF2C5C60D7004A284E /* RecipeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBEE2C5C60D7004A284E /* RecipeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		8447EBB92C5C5068004A284E /* parchment-recipes-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "parchment-recipes-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8447EBBC2C5C5068004A284E /* parchment_recipes_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parchment_recipes_appApp.swift; sourceTree = "<group>"; };
+		8447EBBC2C5C5068004A284E /* ParchmentRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParchmentRecipesApp.swift; sourceTree = "<group>"; };
 		8447EBBE2C5C5068004A284E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8447EBC02C5C506A004A284E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8447EBC32C5C506A004A284E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -44,6 +48,10 @@
 		8447EBD32C5C506A004A284E /* parchment-recipes-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "parchment-recipes-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447EBD72C5C506A004A284E /* parchment_recipes_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parchment_recipes_appUITests.swift; sourceTree = "<group>"; };
 		8447EBD92C5C506A004A284E /* parchment_recipes_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parchment_recipes_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8447EBE72C5C50E4004A284E /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		8447EBE92C5C528E004A284E /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		8447EBEB2C5C529C004A284E /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		8447EBEE2C5C60D7004A284E /* RecipeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +102,9 @@
 		8447EBBB2C5C5068004A284E /* parchment-recipes-app */ = {
 			isa = PBXGroup;
 			children = (
-				8447EBBC2C5C5068004A284E /* parchment_recipes_appApp.swift */,
+				8447EBED2C5C555F004A284E /* error */,
+				8447EBE62C5C50A7004A284E /* model */,
+				8447EBBC2C5C5068004A284E /* ParchmentRecipesApp.swift */,
 				8447EBBE2C5C5068004A284E /* ContentView.swift */,
 				8447EBC02C5C506A004A284E /* Assets.xcassets */,
 				8447EBC22C5C506A004A284E /* Preview Content */,
@@ -125,6 +135,24 @@
 				8447EBD92C5C506A004A284E /* parchment_recipes_appUITestsLaunchTests.swift */,
 			);
 			path = "parchment-recipes-appUITests";
+			sourceTree = "<group>";
+		};
+		8447EBE62C5C50A7004A284E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				8447EBE72C5C50E4004A284E /* Recipe.swift */,
+				8447EBE92C5C528E004A284E /* Ingredient.swift */,
+				8447EBEB2C5C529C004A284E /* Direction.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		8447EBED2C5C555F004A284E /* error */ = {
+			isa = PBXGroup;
+			children = (
+				8447EBEE2C5C60D7004A284E /* RecipeError.swift */,
+			);
+			path = error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +285,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8447EBEA2C5C528E004A284E /* Ingredient.swift in Sources */,
+				8447EBE82C5C50E4004A284E /* Recipe.swift in Sources */,
 				8447EBBF2C5C5068004A284E /* ContentView.swift in Sources */,
-				8447EBBD2C5C5068004A284E /* parchment_recipes_appApp.swift in Sources */,
+				8447EBEC2C5C529C004A284E /* Direction.swift in Sources */,
+				8447EBEF2C5C60D7004A284E /* RecipeError.swift in Sources */,
+				8447EBBD2C5C5068004A284E /* ParchmentRecipesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
