@@ -9,23 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var recipe: Recipe? // optional bc when view loads, the object does not have data from api call
+    @State private var text: String = "placeholder"
     
     var body: some View {
         VStack {
             Text(recipe?.title ?? "Recipe Title")
             Text(recipe?.sourceUrl ?? "URL")
+            
             if let ingredients = recipe?.ingredients {
-                ForEach(ingredients) { ingredient in
+                List(ingredients) { ingredient in
+                    TextField("\(ingredient.amount) \(ingredient.unit) \(ingredient.ingredientType)", text: $text)
                     HStack {
                         Text("\(ingredient.amount)")
                         Text(ingredient.unit)
                         Text(ingredient.ingredientType)
                     }
                 }
+                    .scrollDisabled(true)
             }
             
+            
+            if let directions = recipe?.directions {
+                List(directions) { direction in
+                    VStack {
+                        Text(direction.content)
+                    }
+                }.scrollDisabled(true)
+            }
         }
-        .padding()
         .task {
             do {
                 recipe = try await getRecipe()
