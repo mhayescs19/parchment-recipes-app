@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct ParchmentRecipesApp: App {
+    @StateObject var user: UserManager = UserManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(user)
         }
+        
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84031E1B2C61B0E200F7F3D6 /* RecipeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84031E1A2C61B0E200F7F3D6 /* RecipeDto.swift */; };
 		8447EBBD2C5C5068004A284E /* ParchmentRecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBBC2C5C5068004A284E /* ParchmentRecipesApp.swift */; };
 		8447EBBF2C5C5068004A284E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBBE2C5C5068004A284E /* ContentView.swift */; };
 		8447EBC12C5C506A004A284E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8447EBC02C5C506A004A284E /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 		8447EBEA2C5C528E004A284E /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBE92C5C528E004A284E /* Ingredient.swift */; };
 		8447EBEC2C5C529C004A284E /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBEB2C5C529C004A284E /* Direction.swift */; };
 		8447EBEF2C5C60D7004A284E /* RecipeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447EBEE2C5C60D7004A284E /* RecipeError.swift */; };
+		848936F22C616A060061F509 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848936F12C616A060061F509 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84031E1A2C61B0E200F7F3D6 /* RecipeDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDto.swift; sourceTree = "<group>"; };
 		8447EBB92C5C5068004A284E /* parchment-recipes-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "parchment-recipes-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447EBBC2C5C5068004A284E /* ParchmentRecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParchmentRecipesApp.swift; sourceTree = "<group>"; };
 		8447EBBE2C5C5068004A284E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		8447EBE92C5C528E004A284E /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		8447EBEB2C5C529C004A284E /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 		8447EBEE2C5C60D7004A284E /* RecipeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeError.swift; sourceTree = "<group>"; };
+		848936F12C616A060061F509 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		8447EBBB2C5C5068004A284E /* parchment-recipes-app */ = {
 			isa = PBXGroup;
 			children = (
+				848936F32C616A660061F509 /* service */,
 				8447EBED2C5C555F004A284E /* error */,
 				8447EBE62C5C50A7004A284E /* model */,
 				8447EBBC2C5C5068004A284E /* ParchmentRecipesApp.swift */,
@@ -143,6 +148,8 @@
 				8447EBE72C5C50E4004A284E /* Recipe.swift */,
 				8447EBE92C5C528E004A284E /* Ingredient.swift */,
 				8447EBEB2C5C529C004A284E /* Direction.swift */,
+				848936F12C616A060061F509 /* UserManager.swift */,
+				84031E1A2C61B0E200F7F3D6 /* RecipeDto.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -153,6 +160,13 @@
 				8447EBEE2C5C60D7004A284E /* RecipeError.swift */,
 			);
 			path = error;
+			sourceTree = "<group>";
+		};
+		848936F32C616A660061F509 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +300,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8447EBEA2C5C528E004A284E /* Ingredient.swift in Sources */,
+				84031E1B2C61B0E200F7F3D6 /* RecipeDto.swift in Sources */,
 				8447EBE82C5C50E4004A284E /* Recipe.swift in Sources */,
+				848936F22C616A060061F509 /* UserManager.swift in Sources */,
 				8447EBBF2C5C5068004A284E /* ContentView.swift in Sources */,
 				8447EBEC2C5C529C004A284E /* Direction.swift in Sources */,
 				8447EBEF2C5C60D7004A284E /* RecipeError.swift in Sources */,

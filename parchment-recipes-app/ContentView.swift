@@ -8,12 +8,57 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var recipe: Recipe? // optional bc when view loads, the object does not have data from api call
-    @State private var text: String = "placeholder"
+    
+    @EnvironmentObject var user: UserManager
+    
+    enum RecipeFieldType {
+        case title
+    }
+
+    @State private var originalText: String = ""
     
     var body: some View {
-        VStack {
-            Text(recipe?.title ?? "Recipe Title")
+        List {
+            ForEach($user.recipes) { $recipe in
+                TextField(recipe.title, text: $recipe.title, onEditingChanged: { isEditing in
+                    if !isEditing {
+                        print("done editing")
+                        if originalText == recipe.title {
+                            Task {
+                                do {
+                                    try await user.patchRecipe(recipeId: recipe.id, recipeDto: RecipeDto(title: recipe.title))
+                                } catch {
+                                    print("unknown error")
+                                }
+                            }
+                        }
+                    } else {
+                        self.originalText = recipe.title
+                    }
+                }
+                )
+                    .onSubmit {
+                        print("Submit")
+                    }
+            }
+        }
+        .listStyle(.plain)
+        .task {
+            do {
+                user.recipes = try await user.getAllRecipes()
+            } catch RecipeError.invalidUrl {
+                print("error processing data")
+            } catch {
+                print("unknown error")
+            }
+        }
+        
+        List (user.recipes) { recipe in
+            Text(recipe.title)
+        }
+        /*
+         VStack {
+            Text( ?? "Recipe Title")
             Text(recipe?.sourceUrl ?? "URL")
             
             if let ingredients = recipe?.ingredients {
@@ -28,7 +73,6 @@ struct ContentView: View {
                     .scrollDisabled(true)
             }
             
-            
             if let directions = recipe?.directions {
                 List(directions) { direction in
                     VStack {
@@ -39,13 +83,13 @@ struct ContentView: View {
         }
         .task {
             do {
-                recipe = try await getRecipe()
+                user.recipes = try await user.getAllRecipes()
             } catch RecipeError.invalidUrl {
                 print("error processing data")
             } catch {
                 print("unknown error")
             }
-        }
+        }*/
     }
 }
 
@@ -73,4 +117,5 @@ func getRecipe() async throws -> Recipe {
 
 #Preview {
     ContentView()
+        .environmentObject(UserManager())
 }

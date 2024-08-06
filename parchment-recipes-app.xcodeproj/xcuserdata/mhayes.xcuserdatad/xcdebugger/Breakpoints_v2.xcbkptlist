@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B5381C62-3B29-47F2-8AF9-2CD8A2225A7C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "638DEDE5-DE50-41A1-87F3-E961D362AA7D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "parchment-recipes-app/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "638DEDE5-DE50-41A1-87F3-E961D362AA7D - d36b5fef466c5813"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "parchment_recipes_app.ContentView.body.getter : some"
+                  moduleName = "parchment-recipes-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mhayes/Swift/parchment-recipes-app/parchment-recipes-app/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24">
+               </Location>
+               <Location
+                  uuid = "638DEDE5-DE50-41A1-87F3-E961D362AA7D - eefc51e2c560ff32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;SwiftUI.Binding&lt;Swift.Array&lt;parchment_recipes_app.Recipe&gt;&gt;, Swift.Int, &lt;&lt;opaque return type of SwiftUI.View.onSubmit(of: SwiftUI.SubmitTriggers, _: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in parchment_recipes_app.ContentView.body.getter : some"
+                  moduleName = "parchment-recipes-app"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mhayes/Swift/parchment-recipes-app/parchment-recipes-app/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

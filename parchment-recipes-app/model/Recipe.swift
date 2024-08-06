@@ -11,6 +11,7 @@ struct Recipe : Codable, Identifiable {
     let id: Int
     var title: String
     var sourceUrl: String
+    var description: String
     var ingredients: [Ingredient]
     var directions: [Direction]
 }
